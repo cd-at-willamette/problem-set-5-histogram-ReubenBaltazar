@@ -1,5 +1,5 @@
 from pgl import *
-
+# Collaborators: Anika Neu
 #1a
 def create_histogram_array(data:list[int])->list[int]:
     histogram=[0]*(max(data)+1)
