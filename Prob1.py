@@ -2,7 +2,13 @@ from pgl import *
 
 #1a
 def create_histogram_array(data:list[int])->list[int]:
-    pass
+    histogram=[0]*(max(data)+1)
+    for digit in data:
+        histogram[digit]+=1
+    return histogram
+PI_DIGITS=[3,1,4,1,5,9,2,6,5,3,5,5,8,9,7,9]
+histogram=create_histogram_array(PI_DIGITS)
+print(histogram)
 
 #1b
 def print_histogram(hist:list[int]) -> None:
