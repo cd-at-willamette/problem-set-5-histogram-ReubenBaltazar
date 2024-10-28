@@ -12,18 +12,25 @@ print(histogram)
 
 #1b
 def print_histogram(hist:list[int]) -> None:
-    pass
+    for i in range (len(hist)):
+        print(f"{i}:{'*'* hist[i]}")
+print_histogram(histogram)
 
 #1c
 def graph_histogram(hist:list[int], width:int, height:int) -> None:
+    gw=GWindow(width,height)
+    max_value=max(hist)
+    bar_width=width/len(hist)
 
-    def my_rect(x,y,w,h,color):
-        rect = GRect(x,y,w,h)
-        rect.set_filled(True)
-        rect.set_color(color)
-        gw.add(rect)
 
-    pass
+    for i, value in enumerate(hist):
+        bar_height = (value / max_value) * height  
+        bar = GRect(i * bar_width, height - bar_height, bar_width, bar_height)
+        bar.set_filled(True)
+        bar.set_color("red")
+        gw.add(bar)
+
+graph_histogram(create_histogram_array(PI_DIGITS), 400, 400)
 
 # Some testing printouts for your use!
 PI_DIGITS = [3,1,4,1,5,9,2,6,5,3,5,5,8,9,7,9]
