@@ -1,0 +1,15 @@
+"""
+For each integer in hist print:
+
+    The index, beginning with zero and increasing.
+    A colon followed by a space ": ".
+    A number of 'star' or 'asterisk' characters equal to the value hist[index]. 
+"""
+
+emph: 
+    A colon followed by a space ": ".
+
+emph:
+  a space ": ".
+
+9/10
